@@ -52,7 +52,7 @@ In a local environment, the `Link` element neither scrolls to the target element
 
 ### Stackblitz Environment
 
-On Stackblitz, the `Link` element behaves as expected, both before and after form submission. It scrolls to the target element and opens the `details` element when clicked.
+On [Stackblitz](https://stackblitz.com/edit/qwik-starter-xqpaps), the `Link` element behaves as expected, both before and after form submission. It scrolls to the target element and opens the `details` element when clicked.
 
 ## Testing the Issue
 
