@@ -1,65 +1,59 @@
-# Qwik City App ⚡️
+# Qwik Scroll Issue Demo
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+This repository contains a demo for the Qwik scroll issue. Follow the instructions below to clone and start the repository:
 
----
+## Cloning the Repository
 
-## Project Structure
+1. Open a terminal.
+2. Navigate to the directory where you want to clone the repository.
+3. Run the following command:
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+   ```bash
+   git clone https://github.com/Sport-Thieme/qwik-scroll-issue
+   ```
 
-Inside your project, you'll see the following directory structure:
+## Starting the Repository
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+1. Navigate into the cloned repository's directory:
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
+   ```bash
+   cd qwik-scroll-issue
+   ```
 
-- `src/components`: Recommended directory for components.
+2. Install the dependencies:
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+   ```bash
+   npm install
+   ```
 
-## Add Integrations and deployment
+3. Start the application:
 
-Use the `pnpm qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
+   ```bash
+   npm start
+   ```
 
-```shell
-pnpm qwik add # or `pnpm qwik add`
-```
+The application should now be running at `http://localhost:5173`.
 
-## Development
+# Issue Description
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+This repository demonstrates an unexpected behavior in Qwik related to the `<a>` element and the Qwik `Link` element when used for scrolling to an element with a specific id.
 
-```shell
-npm start # or `pnpm start`
-```
+## `<a>` Element Behavior
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+The `<a>` element behaves as expected, scrolling to the target element when clicked, until a `routeAction$` is called upon form submission. After the form submission, clicking on the `<a>` element has no effect. This behavior is consistent both when running the application locally and on Stackblitz.
 
-## Preview
+## Qwik `Link` Element Behavior
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+The behavior of the Qwik `Link` element differs between running the application locally and on Stackblitz.
 
-```shell
-pnpm preview # or `pnpm preview`
-```
+### Local Environment
 
-## Production
+In a local environment, the `Link` element neither scrolls to the target element nor opens the `details` element, even before form submission.
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+### Stackblitz Environment
 
-```shell
-pnpm build # or `pnpm build`
-```
+On Stackblitz, the `Link` element behaves as expected, both before and after form submission. It scrolls to the target element and opens the `details` element when clicked.
+
+## Testing the Issue
+
+Detailed instructions on how to test this issue will be displayed on the screen when you run the application.
