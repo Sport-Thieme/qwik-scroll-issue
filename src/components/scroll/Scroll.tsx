@@ -11,59 +11,55 @@ export default component$(() => {
       <section>
         <div>
           <p>
-            Before clicking on the "Anchor tag" link, scroll to the bottom and
-            make sure details element is closed. Scroll back up and click on the
-            "Anchor tag" link.
+            Prior to clicking the "Anchor tag" link, scroll to the bottom of the
+            page and confirm that the details element is closed. Then, scroll
+            back to the top and click on the "Anchor tag" link.
           </p>
           <p>
-            After clicking on the "Anchor tag" link, the details element should
-            open and the browser should automatically scroll down to the content
-            in details (p element which holds the id from the link). The text
-            "Content" should be visible.
+            Upon clicking the "Anchor tag" link, the details element should
+            expand, and the browser should automatically scroll to the content
+            within the details element (the paragraph element with the ID from
+            the link). The text "Content" should be visible.
           </p>
           <p>
-            <strong>Now, make sure the details element is closed again.</strong>
+            <strong>Ensure the details element is closed once again.</strong>
           </p>
           <p>
-            Next, scroll back up, enter some text in the input field and click
-            on the submit button.
+            Scroll back to the top, enter text into the input field, and click
+            the submit button.
           </p>
           <p>
-            After submitting, the entered text should be displayed below the
+            Following submission, the entered text should appear below the
             submit button.
           </p>
           <p>
-            Now click on the "Anchor tag" link again. Unfortunately, the browser
-            will neither open the details element nor scroll to the content with
-            the id.
+            If you click on the "Anchor tag" link again, the browser will not
+            open the details element or scroll to the content with the ID.
           </p>
           <p>
-            If you'd like to try the link working again, you will have to
-            manually remove the hash from the url, then reload the page. Just
-            reloading the page will not work out.
+            To see the link function again, manually remove the hash from the
+            URL and reload the page. Simply reloading the page will not suffice.
           </p>
           <p>
-            Note that this manual removal of the hash (for the link to work
-            correctly) is not necessary if the form is not submitted.
+            Note: This manual removal of the hash is not required if the form is
+            not submitted.
           </p>
           <p>**********</p>
           <p>
-            Now, onto checking the "Actual Link" link. As the name suggests,
-            this is not an anchor tag but the Qwik Link component which has the
-            same href as the "Anchor tag" link.
+            Now, let's examine the "Actual Link". This is not an anchor tag but
+            a Qwik Link component with the same href as the "Anchor tag" link.
           </p>
           <p>
-            If you follow the same process as with the "Anchor tag" link, you
-            will observe that the "Actual Link" does not work at all - it
-            doesn't scroll down nor open the details element even before
-            submitting the Form.
+            If you repeat the same process as with the "Anchor tag" link, you'll
+            find that the "Actual Link" does not function - it neither scrolls
+            down nor opens the details element, even before form submission.
           </p>
           <p>
-            This shows very different behaviour from the one that can be
-            observed on Stackblitz when running the exact same code with the
-            same contents of package.json. On Stackblitz, not only the "Actual
-            Link" will work (scrolling down and opening the details element) but
-            it will also work correctly even after submitting the Form.
+            This behavior is markedly different from what can be observed on
+            Stackblitz when running the exact same code with the same contents
+            of package.json. On Stackblitz, the "Actual Link" not only functions
+            (scrolling down and opening the details element), but it also works
+            correctly even after form submission.
           </p>
           <a
             href="https://stackblitz.com/edit/qwik-starter-xqpaps"
