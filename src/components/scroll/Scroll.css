@@ -1,0 +1,31 @@
+article,
+article > section:first-child,
+.formContainer,
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 800px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+article > section:first-child {
+  gap: 5rem;
+}
+
+.formContainer,
+.form {
+  gap: 2rem;
+}
+
+.form > input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: large;
+}
