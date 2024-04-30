@@ -40,7 +40,7 @@ This repository demonstrates an unexpected behavior in Qwik related to the `<a>`
 
 ## `<a>` Element Behavior
 
-The `<a>` element behaves as expected, scrolling to the target element when clicked, until a `routeAction$` is called upon form submission. After the form submission, clicking on the `<a>` element has no effect. This behavior is consistent both when running the application locally and on Stackblitz.
+The `<a>` element behaves as expected, scrolling to the target element and opening the `details` element that contains the target when clicked, until a `routeAction$` is called upon form submission. After the form submission, clicking on the `<a>` element has no effect. This behavior is consistent both when running the application locally and on Stackblitz.
 
 ## Qwik `Link` Element Behavior
 
